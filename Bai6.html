@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh tong 30 so chia het cho 7 dau tien trong so tu nhien</title>
+</head>
+<body>
+<input type="submit" onclick="sum()">
+</body>
+<script>
+    function sum() {
+        let sum = 0, count = 0, i = 0;
+        while (count < 30) {
+            if (i % 7 == 0) {
+                sum += i;
+                i++;
+                count++;
+            }else{
+                i++;
+            }
+        }
+        document.write(sum);
+    }
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game doan so</title>
+</head>
+<body>
+<input type="submit" onclick="xuLyLogic()" value="Play">
+</body>
+<script>
+    function xuLyLogic() {
+        let number = +prompt("Nhập vào số lớn nhất trong khoảng khoảng muốn dự đoán:");
+        let numberRandom = Math.floor(Math.random() * number);
+        console.log(numberRandom);
+        let numberChoice = +prompt("Nhập số dự đoán:");
+        let count = 0;
+        while (numberChoice !== numberRandom) {
+            count++;
+            if (count == 4) {
+                alert("Bạn hết số lần đoán")
+                break;
+            } else if (numberChoice < numberRandom) {
+                alert("Số bạn đoán bé hơn");
+            } else {
+                alert("Số bạn đoán lớn hơn");
+            }
+            numberChoice = +prompt("Nhập số bạn đoán");
+        }
+    }
+</script>
+</html>

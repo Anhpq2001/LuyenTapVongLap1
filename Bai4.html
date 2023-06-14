@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim so dau tien trong day fibonacci chia het cho 5</title>
+</head>
+<body>
+<input type="submit" onclick="search()">
+</body>
+<script>
+    function search(){
+        let n1 = 0, n2 = 1, nextTerm;
+        nextTerm = n1 + n2;
+        while(true){
+            n1 = n2;
+            n2 = nextTerm;
+            nextTerm = n1 + n2;
+            if(nextTerm % 5 == 0){
+                document.write(nextTerm);
+                break;
+            }
+        }
+    }
+</script>
+</html>

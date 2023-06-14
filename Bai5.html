@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh tong 20 so fibonacci dau tien</title>
+</head>
+<body>
+<input type="submit" onclick="sumFibonacci()">
+</body>
+<script>
+    function sumFibonacci() {
+        let n1 = 0, n2 = 1, nextTerm, count = 0, sum = 0;
+        nextTerm = n1 + n2;
+        while (count < 20) {
+            n1 = n2;
+            n2 = nextTerm;
+            nextTerm = n1 + n2;
+            sum += nextTerm;
+            count++;
+        }
+        document.write("Tong cua 20 so fibonacci dau tien:" + sum);
+    }
+</script>
+</html>
